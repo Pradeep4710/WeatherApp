@@ -17,13 +17,13 @@ const createWeatherCard = (cityName, weatherItem, index) => {
                     <h4>Humidity: ${weatherItem.main.humidity} %</h4>
                 </div>
                 <div class="icon">
-                    <img src="http://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" alt="weather png">
+                    <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" alt="weather png">
                     <h4>${weatherItem.weather[0].description}</h4>
                 </div>`;
     } else {
         return `<li class="card">
                 <h3>(${weatherItem.dt_txt.split(" ")[0]})</h3>
-                <img src="http://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@2x.png" alt="weather png">
+                <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@2x.png" alt="weather png">
                 <h4>Temp: ${(weatherItem.main.temp - 273.15).toFixed(2)}°C</h4>
                 <h4>Wind: ${weatherItem.wind.speed} m/s</h4>
                 <h4>Humidity: ${weatherItem.main.humidity} %</h4>
@@ -33,7 +33,7 @@ const createWeatherCard = (cityName, weatherItem, index) => {
 
 // Fetch and display weather details
 const getWeatherDetails = (cityName, lat, lon) => {
-    const WEATHER_API_URL = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+    const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
 
     fetch(WEATHER_API_URL).then(res => res.json()).then(data => {
         const uniqueForecastDays = [];
@@ -69,7 +69,7 @@ const getWeatherDetails = (cityName, lat, lon) => {
 // Fetch city coordinates and weather details
 const getCityCoordinates = (cityName) => {
     if (!cityName) return;
-    const GEOCODING_API_URL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
+    const GEOCODING_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
 
     fetch(GEOCODING_API_URL).then(res => res.json()).then(data => {
         if (!data.length) return alert(`No coordinates found for ${cityName}.`);
