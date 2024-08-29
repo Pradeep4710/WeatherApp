@@ -6,17 +6,24 @@
     <title>Weather Website</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
 </head>
 <body>
-    <h1>Weather App</h1>
+    <div class="heading">
+        <img style="height: 5rem; width: 5rem;" src="/favicon.png">
+        <h1>Weather App</h1>
+    </div>
     <div class="container">
         <div class="weather-input">
             <h3>Enter the name of a City.</h3>
-            <input type="text" class="city-input" placeholder="eg.  Delhi, London, New York...">
+            <input type="text" class="city-input" placeholder="eg. Delhi, London, New York...">
             <button class="searchButton">Search</button>
             <div class="seperator"></div>
             <button class="locationButton">Current Location</button>
-        </div>
+            <select class="city-dropdown" aria-label="Recently searched cities" style="display: none;">
+                <option value="">Recently searched cities</option>
+            </select>
+        </div>        
         <div class="weather-data">
             <div class="current-weather">
                 <div class="details">
@@ -27,7 +34,7 @@
                 </div>
             </div>
             <div class="days-forecast">
-                <h2>5-Day Forecast</h2>
+                <h2>5-Day Forecast :</h2>
                 <ul class="weather-cards">
                     <li class="card">
                         <h3>( ______ )</h3>
