@@ -1,41 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character set and viewport meta tags for proper rendering -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Website</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Link to external JavaScript file with defer attribute to load after HTML -->
     <script src="script.js" defer></script>
+    <!-- Favicon for the website -->
     <link rel="icon" type="image/x-icon" href="/favicon.png">
 </head>
 <body>
+    <!-- Heading section with logo and title -->
     <div class="heading">
-        <img style="height: 5rem; width: 5rem;" src="/favicon.png">
+        <!-- Logo image -->
+        <img style="height: 5rem; width: 5rem;" src="/favicon.png" alt="Weather App Logo">
+        <!-- Main heading -->
         <h1>Weather App</h1>
     </div>
+    
+    <!-- Main container for the weather app -->
     <div class="container">
+        <!-- Section for user input and controls -->
         <div class="weather-input">
+            <!-- Instructions for user -->
             <h3>Enter the name of a City.</h3>
+            <!-- Input field for city name -->
             <input type="text" class="city-input" placeholder="eg. Delhi, London, New York...">
+            <!-- Button to initiate weather search -->
             <button class="searchButton">Search</button>
+            <!-- Separator for visual separation -->
             <div class="seperator"></div>
+            <!-- Button to get weather for current location -->
             <button class="locationButton">Current Location</button>
+            <!-- Dropdown for recently searched cities, initially hidden -->
             <select class="city-dropdown" aria-label="Recently searched cities" style="display: none;">
+                <!-- Placeholder option for dropdown -->
                 <option value="">Recently searched cities</option>
             </select>
         </div>        
+
+        <!-- Section for displaying weather data -->
         <div class="weather-data">
+            <!-- Current weather information -->
             <div class="current-weather">
                 <div class="details">
+                    <!-- Placeholder for current weather details -->
                     <h2>______ (_____)</h2>
                     <h4>Temperature: ___°C</h4>
                     <h4>Wind: ___ m/s</h4>
                     <h4>Humidity: ___ %</h4>
                 </div>
             </div>
+            <!-- 5-day weather forecast -->
             <div class="days-forecast">
                 <h2>5-Day Forecast :</h2>
                 <ul class="weather-cards">
+                    <!-- List of weather forecast cards -->
                     <li class="card">
                         <h3>( ______ )</h3>
                         <h4>Temperature: ___°C</h4>
