@@ -1,5 +1,7 @@
 # Weather App
 
+# Link to the deployed website:  https://weatherbrev.netlify.app/
+
 ## Overview
 
 This Weather App provides current and forecasted weather information for cities worldwide. Built using HTML, CSS, and JavaScript, it offers an interactive and user-friendly interface for accessing weather data. The app utilizes the OpenWeatherMap API to fetch weather details and present them in a visually appealing format.
