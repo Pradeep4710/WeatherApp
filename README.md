@@ -1,7 +1,3 @@
-Sure! Here's a 250-word README for your weather application:
-
----
-
 # Weather App
 
 ## Overview
