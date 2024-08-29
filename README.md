@@ -1,8 +1,6 @@
-Sure! Here's a 250-word README for your weather application:
-
----
-
 # Weather App
+
+# Link to the deployed website:  https://weatherbrev.netlify.app/
 
 ## Overview
 
